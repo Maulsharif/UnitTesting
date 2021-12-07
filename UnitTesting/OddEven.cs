@@ -5,10 +5,10 @@ using System.Text;
 namespace UnitTesting
 {
    public static class OddEven
-    {
-        public static int[] GenerateHundredNumbers(int start, int end)
+   {
+        public static int[] GenerateNumbers(int start, int end, int length)
         {
-            int[] result = new int[100];
+            int[] result = new int[length];
             Random rnd = new Random();
             for (int i = 0; i < result.Length; i++)
             {
@@ -17,4 +17,5 @@ namespace UnitTesting
             return result;
         }
     }
+
 }
