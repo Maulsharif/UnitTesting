@@ -19,7 +19,7 @@ namespace UnitTesting
 
         public static bool IsEven(int number)
         {
-            bool result = number % 2 == 0 ? true : false;
+            bool result = number % 2 == 0  && number !=0 ? true : false;
             return result;
         }
 
