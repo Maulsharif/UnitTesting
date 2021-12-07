@@ -25,14 +25,41 @@ namespace UnitTesting
 
         public static bool IsOdd(int number)
         {
-            bool result = number % 2 != 0 && number % number != 0 ? true : false;
+            bool result = number % 2 != 0  ? true : false;
             return result;
         }
 
         public static bool IsPrime(int number)
         {
-            bool result = IsEven(number) && IsOdd(number) ? false : true;
+            bool result = true;
+            if (number == 0 || number == 1)
+            {
+                result = false;
+            }
+            else
+            {
+                for (int i = 2; i <= number / 2; ++i)
+                {
+                    if (number % i == 0)
+                    {
+                        result = false;
+                        break;
+                    }
+                }
+            }
             return result;
+        }
+
+        public static string  GetNumberType(int number)
+        { 
+           return _ = IsPrime(number) ? "Prime" : IsOdd(number) ? "Odd" : "Even";  
+        }
+        public static void PrintNumbers( int[]numbers)
+        {
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine($"{ numbers[i]} - {GetNumberType(numbers[i])}");
+            }
         }
 
     }
