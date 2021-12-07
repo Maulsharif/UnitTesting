@@ -16,6 +16,25 @@ namespace UnitTesting
             }
             return result;
         }
+
+        public static bool IsEven(int number)
+        {
+            bool result = number % 2 == 0 ? true : false;
+            return result;
+        }
+
+        public static bool IsOdd(int number)
+        {
+            bool result = number % 2 != 0 && number % number != 0 ? true : false;
+            return result;
+        }
+
+        public static bool IsPrime(int number)
+        {
+            bool result = IsEven(number) && IsOdd(number) ? false : true;
+            return result;
+        }
+
     }
 
 }
