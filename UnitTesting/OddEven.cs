@@ -25,7 +25,7 @@ namespace UnitTesting
 
         public static bool IsOdd(int number)
         {
-            bool result = number % 2 != 0  ? true : false;
+            bool result = number % 2 != 0 && !IsPrime(number) ? true : false;
             return result;
         }
 
@@ -54,6 +54,7 @@ namespace UnitTesting
         { 
            return _ = IsPrime(number) ? "Prime" : IsOdd(number) ? "Odd" : "Even";  
         }
+
         public static void PrintNumbers( int[]numbers)
         {
             for (int i = 0; i < numbers.Length; i++)
