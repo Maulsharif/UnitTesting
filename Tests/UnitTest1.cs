@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Collections.Generic;
 using UnitTesting;
 namespace Tests
 {
@@ -48,6 +49,18 @@ namespace Tests
             {
                 Assert.IsTrue(arr[i] >= 1 || arr[i] <= 10);
             }
+        }
+    }
+    
+    [TestFixture]
+    public class HarryPotterTests
+    {
+        
+        [Test]
+        public void CountDiscountSumTest()
+        {
+            List<Book> books = DataSource.books;
+            Assert.AreEqual(12.4, DiscountCounter.CountDiscountSum(books,5));
         }
     }
 }
