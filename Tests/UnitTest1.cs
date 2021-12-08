@@ -55,7 +55,6 @@ namespace Tests
     [TestFixture]
     public class HarryPotterTests
     {
-
         [Test]
         public void CountDiscountSumTest()
         {
@@ -63,15 +62,12 @@ namespace Tests
             Assert.AreEqual(12.4, DiscountCounter.CountDiscountSum(books, 5));
         }
     }
-
-
     [TestFixture]
     public class WordWrapperTest
     {
         [Test]
         public void WordWraperTest()
         {
-          
             var characterCount = 4;
             var service = new WordWraper(characterCount);
             var value = "this is a test";
@@ -83,7 +79,6 @@ namespace Tests
         [Test]
         public void WordWrapperEmptyString()
         {
-           
             var characterCount = 2;
             var service = new WordWraper(characterCount);
             string value = null;
@@ -93,9 +88,8 @@ namespace Tests
         }
 
         [Test]
-        public void WordWrap_InputeTextShorterThenCharacterCount_NoWrappedString()
+        public void WordWraperNotWrapingString()
         {
-           
             var characterCount = 10;
             var service = new WordWraper(characterCount);
             string value = "test value";
